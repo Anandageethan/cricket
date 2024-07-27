@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cricket Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#latest-news">Latest News</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#rankings">Rankings</a></li>
+                <li><a href="#player-stats">Player Stats</a></li>
+                <li><a href="#live-scores">Live Scores</a></li>
+                <li><a href="#worldcup-league">World Cup League</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="latest-news">
+            <h2>Latest News</h2>
+            <div id="news-content"></div>
+        </section>
+        <section id="teams">
+            <h2>Teams</h2>
+            <div id="teams-content" class="flex-container"></div>
+        </section>
+        <section id="rankings">
+            <h2>Rankings</h2>
+            <div class="rankings-container">
+                <div id="t20-rankings-content" class="ranking-table">
+                    <h3>T20 Rankings</h3>
+                </div>
+                <div id="test-rankings-content" class="ranking-table">
+                    <h3>Test Rankings</h3>
+                </div>
+                <div id="odi-rankings-content" class="ranking-table">
+                    <h3>ODI Rankings</h3>
+                </div>
+            </div>
+        </section>
+        <section id="player-stats">
+            <h2>Player Stats</h2>
+            <input type="text" id="search-bar" placeholder="Search for players..." oninput="searchPlayers()">
+            <select id="team-filter" onchange="filterByTeam()">
+                <option value="">Filter by Team</option>
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="England">England</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Pakistan">Pakistan</option>
+            </select>
+            <div id="stats-content" class="flex-container"></div>
+        </section>
+        <section id="live-scores">
+            <h2>Live Scores</h2>
+            <button onclick="refreshLiveScores()">Refresh Scores</button>
+            <div id="scores-content"></div>
+        </section>
+        <section id="worldcup-league">
+            <h2>World Cup League Points Table</h2>
+            <div id="worldcup-content"></div>
+        </section>
+        <section id="player-info" style="display: none;">
+            <h2>Player Information</h2>
+            <div id="player-info-content" class="player-info"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
